@@ -10,7 +10,7 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Specific Branch Workflow
+      - name: Workflow on Specific Branch
         uses: benc-uk/workflow-dispatch@v1.1
         with:
           workflow: specific-branch-workflow.yml
