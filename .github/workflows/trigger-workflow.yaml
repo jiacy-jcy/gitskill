@@ -4,7 +4,7 @@ name: Trigger Workflow on Schedule
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # 每天凌晨1点（UTC时间）触发
+    - cron: '30 7 * * *'  # 每天凌晨1点（UTC时间）触发
 
 jobs:
   trigger:
