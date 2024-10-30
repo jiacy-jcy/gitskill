@@ -1,0 +1,18 @@
+# .github/workflows/trigger-workflow.yml
+
+name: Trigger Workflow on Schedule
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # 每天凌晨1点（UTC时间）触发
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Specific Branch Workflow
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: specific-branch-workflow.yml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: refs/heads/your-target-branch
