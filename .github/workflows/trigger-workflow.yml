@@ -13,5 +13,5 @@ jobs:
       - name: Workflow on Specific Branch
         uses: benc-uk/workflow-dispatch@v1.1
         with:
-          workflow: specific-branch-workflow.yml
+          workflow: Workflow on Specific Branch
           token: ${{ secrets.GITHUB_TOKEN }}
