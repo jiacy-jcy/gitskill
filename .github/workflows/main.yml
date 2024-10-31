@@ -1,0 +1,17 @@
+# .github/workflows/specific-branch-workflow.yml
+
+name: Workflow on Specific Branch
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  run-on-branch:
+    if: ${{ github.ref == 'refs/heads/test' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run your task
+        run: echo "Running tasks on ${{ github.ref }}"
