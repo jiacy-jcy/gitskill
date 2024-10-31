@@ -4,11 +4,7 @@ name: Workflow on Specific Branch
 
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'The branch to run on'
-        required: true
-        default: 'test'
+
 
 jobs:
   run-on-branch:
