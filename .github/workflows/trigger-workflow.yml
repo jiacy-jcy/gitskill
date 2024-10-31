@@ -15,3 +15,4 @@ jobs:
         with:
           workflow: Workflow on Specific Branch
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: refs/heads/test
